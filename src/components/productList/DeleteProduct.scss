@@ -1,0 +1,35 @@
+@use "/src/styles/variable" as *;
+
+.modal-delete {
+  padding: 50px;
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+  }
+  .modal-delete__actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 30px;
+    button {
+      width: 129px;
+      height: 50px;
+      font-size: 15px;
+      border-radius: 6px;
+      cursor: pointer;
+      &:first-child {
+        margin-left: 10px;
+      }
+      &.btn-outline {
+        border: 1px solid $black;
+        color: $black;
+        background-color: $white;
+      }
+      &.btn-fill {
+        border: none;
+        background-color: $black;
+        color: $white;
+      }
+    }
+  }
+}

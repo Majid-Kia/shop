@@ -1,0 +1,127 @@
+@use "/src/styles/variable" as *;
+
+.addProduct {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  button {
+    border: none;
+    background-color: $black;
+    color: $white;
+    font-size: 15px;
+    width: 172px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+}
+
+.productList {
+  margin-top: 70px;
+  width: 100%;
+  padding: 0 30px;
+}
+
+.table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0px;
+  min-width: 750px;
+  background-color: $white;
+  margin-top: 23px;
+  border-radius: 4px 4px 0 0;
+  table-layout: fixed;
+}
+.thead {
+  display: table-header-group;
+  tr {
+    color: inherit;
+    display: table-row;
+    vertical-align: middle;
+    outline: 0px;
+
+    th {
+      font-weight: 400;
+      font-size: 13px;
+      display: table-cell;
+      vertical-align: inherit;
+      border-bottom: 1px solid $gray-light3;
+      padding: 18px 14px;
+      color: $gray-light;
+      text-align: initial;
+      &.thImg {
+        width: 5%;
+        padding-right: 30px;
+        padding-left: 20px;
+      }
+      &.thName {
+        padding-right: 30px;
+        width: 35%;
+      }
+      &.thPrice,
+      &.thDate {
+        width: 16%;
+      }
+      &.thAction {
+        width: 8%;
+      }
+      &.thBrand {
+        width: 10%;
+      }
+    }
+  }
+}
+.tbody {
+  tr {
+    &:nth-child(odd) {
+      background-color: $gray-f9;
+    }
+    &:hover {
+      background-color: $gray-light2;
+      td {
+        &.actions {
+          div {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
+    td {
+      padding: 18px 14px;
+      font-size: 16px;
+      font-weight: normal;
+      &.tdName {
+        color: $blue2;
+      }
+      &.tdImg {
+        img {
+          max-width: 40px;
+          max-height: 40px;
+          display: block;
+        }
+      }
+      .currency {
+        font-size: 12px;
+        color: $gray-8b;
+      }
+      &.actions {
+        div {
+          display: flex;
+          justify-content: space-between;
+          width: 60px;
+          opacity: 0;
+          visibility: hidden;
+          transition: all 0.3s ease-in-out;
+          img {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}

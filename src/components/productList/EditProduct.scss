@@ -1,0 +1,112 @@
+@use "/src/styles/variable" as *;
+
+.title {
+  color: $dark-blue;
+  font-size: 29px;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 36px;
+}
+
+.field {
+  margin-top: 14px;
+  &:first-child {
+    margin-top: 0;
+  }
+  display: flex;
+  flex-direction: column;
+  label {
+    font-size: 15px;
+    line-height: 20px;
+  }
+  input {
+    border: 2px solid $black;
+    border-radius: 6px;
+    margin-top: 6px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 0 16px;
+    transition: 200ms;
+
+    &:focus {
+      border-color: $blue2;
+    }
+    &::-webkit-input-placeholder {
+      font-size: 12px;
+      color: $gray-75;
+    }
+    &:-moz-placeholder {
+      font-size: 12px;
+      color: $gray-75;
+    }
+    &::-moz-placeholder {
+      font-size: 12px;
+      color: $gray-75;
+    }
+    &:-ms-input-placeholder {
+      font-size: 12px;
+      color: $gray-75;
+    }
+  }
+  > span {
+    color: $red;
+    font-size: 12px;
+    line-height: 16px;
+    margin-top: 6px;
+  }
+  &.error {
+    input {
+      border-color: $red;
+    }
+  }
+}
+
+.editSubmit {
+  display: flex;
+  justify-content: flex-end;
+  button {
+    background-color: $black;
+    border: none;
+    color: $white;
+    margin-top: 28px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+}
+
+.forgot {
+  margin-top: 14px;
+  display: flex;
+  span {
+    color: $blackText;
+    font-size: 12px;
+  }
+  a {
+    color: $blue;
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+.modal-edit__body {
+  padding: 0 50px;
+  margin-top: 35px;
+  padding-bottom: 35px;
+}
+.modal-edit__title {
+  padding: 20px 50px;
+  border-bottom: 1px solid $gray-cc;
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+  }
+}
